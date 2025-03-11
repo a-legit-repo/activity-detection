@@ -1,0 +1,36 @@
+# Build output directories for all projects
+**/bin/
+**/obj/
+**/out/
+
+# Rider-specific files and directories
+.idea/
+*.sln.iml
+
+# VS Code settings (if using VS Code too)
+.vscode/
+
+# User-specific files (Visual Studio, Rider, etc.)
+*.user
+*.suo
+
+# NuGet packages
+*.nupkg
+.nuget/
+
+# DotCover files
+*.dotCover
+
+# Logs and temporary files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Rider caches (optional)
+.idea/.ideaIC/
+
+# Static web assets (for ASP.NET Core)
+**/wwwroot/
