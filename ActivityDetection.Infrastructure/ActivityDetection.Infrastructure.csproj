@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ActivityDetection.Application\ActivityDetection.Application.csproj" />
     <ProjectReference Include="..\ActivityDetection.Domain\ActivityDetection.Domain.csproj" />
   </ItemGroup>
 
