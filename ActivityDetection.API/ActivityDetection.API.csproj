@@ -4,6 +4,21 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Ensure the compilation context is preserved -->
+    <PreserveCompilationContext>true</PreserveCompilationContext>
   </PropertyGroup>
+
+  <Target Name="CopyTestHostDeps" AfterTargets="Build">
+    <Copy
+            SourceFiles="..\ActivityDetection.API\bin\$(Configuration)\net9.0\ActivityDetection.API.deps.json"
+            DestinationFiles="$(OutputPath)testhost.deps.json"
+            SkipUnchangedFiles="true" />
+  </Target>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\ActivityDetection.Application\ActivityDetection.Application.csproj" />
+    <ProjectReference Include="..\ActivityDetection.Infrastructure\ActivityDetection.Infrastructure.csproj" />
+  </ItemGroup>
 
 </Project>
